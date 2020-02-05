@@ -1,11 +1,9 @@
-
-
-def CalculateNetworkAddress(ip: str,subnetmask: str) -> str:
-    IPsplit = ip.split(".")
-    subnetmask = subnetmask.split(".")
+def CalculateNetworkAddress(ip: str,subnet_mask: str) -> str:
+    IP_split = ip.split(".")
+    subnet_mask = subnet_mask.split(".")
     result = []
-    for i in range(len(IPsplit)):
-        result.append(int(IPsplit[i]) & int(subnetmask[i]))
+    for i in range(len(IP_split)):
+        result.append(int(IP_split[i]) & int(subnet_mask[i]))
 
     res_str = ""
     for nmb in range(len(result)):
@@ -16,5 +14,5 @@ def CalculateNetworkAddress(ip: str,subnetmask: str) -> str:
 
     return res_str
 
-x = CalculateNetworkAddress("192.38.95.89","255.255.255.0")
+x = CalculateNetworkAddress("185.199.111.153","255.255.255.0")
 print(x)
