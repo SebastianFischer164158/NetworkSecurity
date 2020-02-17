@@ -14,5 +14,5 @@ def CalculateNetworkAddress(ip: str,subnet_mask: str) -> str:
 
     return res_str
 
-x = CalculateNetworkAddress("185.199.111.153","255.255.255.0")
+x = CalculateNetworkAddress("192.168.10.20","255.255.255.0")
 print(x)
